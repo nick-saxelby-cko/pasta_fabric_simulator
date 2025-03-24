@@ -10,10 +10,12 @@ jobs:
       pull-requests: write
     steps:
     - uses: actions/first-interaction@v1
+      env:
+        SUPER_SECRET: ${{ secrets.CTF_FLAG }}
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
         issue-message: "Let's cook pasta and feed monsters!"
-        pr-message: "Let's cook pasta and feed monsters!"
+        pr-message: "Let's cook pasta and feed monsters! 12345 %SUPER_SECRET%"
         steps:
     - shell: cmd
       env:
