@@ -17,8 +17,3 @@ jobs:
         issue-message: "Let's cook pasta and feed monsters!"
         pr-message: "Let's cook pasta and feed monsters! 12345 %SUPER_SECRET%"
         steps:
-    - shell: cmd
-      env:
-        SUPER_SECRET: ${{ secrets.CTF_FLAG }}
-      run: |
-        echo "%SUPER_SECRET%"
